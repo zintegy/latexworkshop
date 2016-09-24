@@ -1,0 +1,79 @@
+\documentclass{article}
+    \usepackage[utf8]{inputenc}
+    \usepackage{graphicx}
+    \usepackage{latexsym}
+    \usepackage{geometry}
+    \usepackage{amsfonts}
+    \usepackage{amssymb}
+    \usepackage{amsmath}
+    \usepackage{fancyhdr}
+    \usepackage{systeme}
+    \usepackage{circuitikz}
+    
+    
+    \def\Class{EE 16A}
+    \def\Season{Spring 2016}
+    \def\Number{6}
+    \def\Date{3/8/2016}
+    
+    
+    \pagestyle{fancy}
+    \fancyhf{}
+    \rhead{Yitz Deng, SID 25753453}
+    \lhead{\Class, \Season}
+    \chead{Homework \Number}
+    \rfoot{Page \thepage}
+    \lfoot{\Date}
+
+
+
+    \begin{document}
+
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\Q}{\mathbb{Q}}
+    \newcommand{\T}{\mathrm{T}}
+    \newcommand{\V}{\mathrm{V}}
+    \newcommand{\W}{\mathrm{W}}
+    \newcommand{\soln}{\textbf{Solution:  }}
+    \newcommand{\p}[1]{\item[(#1)]}
+    \newcommand{\centermath}[1]{\hfill #1 \hfill \makebox{} \\}
+
+   
+           \begin{center}
+                \begin{circuitikz} \draw
+                    (0, 0) to [american voltage source, v=10V] (0, 4)  --(0, 6) -- (3, 6) node[right]{A}
+                    to [R, l=$R_1$] (3, 4) -- (2,4) node[left]{E}
+                    to [R, l=$R_2$] (2, 0) node[below]{F}-- (0, 0)
+
+                    (3, 4) -- (4, 4) node[above]{B} to [R, l = $R_3$] (4, 2) node[left]{C} to [R, l=$R_4$] (4, 0) node[below]{D} --(2, 0)
+                    (4, 4) to [short, -o] (6, 4) node[right]{$+$}
+                    (4, 2) to [short, -o] (6, 2) node[right]{$-$}
+                    ;
+                \end{circuitikz}
+            \end{center}
+
+                \begin{center}
+
+                    \begin{circuitikz} \draw
+                        (0, 0) to [american voltage source, v = 3V] (0, 3) to [R, l=$1.8 \Omega$, -o] (3, 3) node[right]{+}
+                        (0, 0) to [short, -o] (3, 0)
+                        ;
+                    \end{circuitikz}
+
+                    \begin{circuitikz} \draw
+                        (0, 0) to [american current source, l = $\frac{5}{3}A$] (0, 3) to [short, -o] (3, 3)node[right]{+}
+                        (2, 3) to [R, l=$1.8 \Omega$] (2, 0) 
+                        (0, 0) to [short, -o] (3, 0)
+                        ;
+                    \end{circuitikz}
+
+                \end{center}
+
+                    
+                    
+    \end{document}
+
+
+
